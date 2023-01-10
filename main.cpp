@@ -16,7 +16,7 @@ class node
 {
 public:
     int m_value;
-    std::shared_ptr<node> parent;
+    std::weak_ptr<node> parent; // именил shared на weak
     node(int value) : m_value{ value } {};
     ~node() { std::cout << "destructor called\n"; }
 };
